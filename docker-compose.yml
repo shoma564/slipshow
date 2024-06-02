@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+    docker-slipshow:
+#        ports:
+#            - 8000:8000
+        build: .
+        image: shomaigu/docker-slipshow
+        container_name: 'docker-slipshow'
+        restart: always
+        volumes:
+            - ./md:/etc/slipshow/
+        tty: true
